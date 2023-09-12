@@ -6,18 +6,15 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/11 21:56:10 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/11 23:29:45 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := BraiiiiiiinnnzzzZ
+NAME := hi_this_is_brain
 
 OBJDIR := objects
 
-SRCS := main.cpp \
-		newZombie.cpp \
-		randomChump.cpp \
-		Zombie.cpp
+SRCS := main.cpp
 
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 

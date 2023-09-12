@@ -6,18 +6,17 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/11 21:56:10 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/11 23:30:18 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := BraiiiiiiinnnzzzZ
+NAME := moar_brainz
 
 OBJDIR := objects
 
 SRCS := main.cpp \
-		newZombie.cpp \
-		randomChump.cpp \
-		Zombie.cpp
+		Zombie.cpp \
+		zombieHorde.cpp
 
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
@@ -25,10 +24,13 @@ OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Development flags
+# CPPFLAGS := -Wall -Wextra -std=c++98 -pedantic
 # CPPFLAGS += -g -O0
 # CPPFLAGS += -fsanitize=thread
 # CPPFLAGS += -fsanitize=address
+# CPPFLAGS += -fsanitize=leak
 
+# CC := c++
 CC := c++
 
 RM := rm -f
