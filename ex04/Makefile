@@ -6,7 +6,7 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/17 22:45:06 by cmenke           ###   ########.fr        #
+#    Updated: 2023/09/18 01:07:32 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ NAME := sed_is_for_losers
 
 OBJDIR := objects
 
-SRCS := main.cpp
+SRCS := main.cpp \
+		ReplaceFileContents.cpp
 
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
-HEADER := 
+HEADER := ReplaceFileContents.hpp
 
 #Production flags
 # CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
