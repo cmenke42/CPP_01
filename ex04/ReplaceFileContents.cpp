@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 00:19:06 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/18 01:21:17 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/18 02:17:52 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,16 @@ bool	ReplaceFileContents::replace(const char* needle, const char* replacement)
 		return (false);
 	while (std::getline(this->_inputFile, line))
 	{
-		this->_replaceNeedleInHaystack(line, needle, replacement);
-		this->_outputFile << line << '\n';
-		if(!this->_inputFile.good() || !this->_outputFile.good())
+		if(this->_inputFile.fail() || this->_outputFile.fail())
 		{
 			std::cerr << "Error: couldn't read/write to files" << std::endl;
 			this->_closeFiles();
 			return (false);
 		}
+		this->_replaceNeedleInHaystack(line, needle, replacement);
+		this->_outputFile << line;
+		if (!this->_inputFile.eof())
+			this->_outputFile << '\n';
 	}
 	this->_outputFile.flush();
 	this->_closeFiles();

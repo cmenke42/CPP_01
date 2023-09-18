@@ -42,4 +42,5 @@
 !Makefile
 !Dockerfile
 # Unignore the "test" folder and its contents
-!/*/test/*
+!/*/tests/*
+!/*/tests/*/*.txt
