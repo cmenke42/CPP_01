@@ -6,15 +6,19 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:14:28 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/19 16:08:46 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/09/19 16:23:00 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HARL_HPP
 # define HARL_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
+// #include <map>
+
+# define INFO_USELESS "[ Probably complaining about insignificant problems ]"
+# define ERR_ARG_COUNT "Error: Wrong number of arguments."
 
 class Harl
 {
@@ -31,7 +35,6 @@ class Harl
 	void	_warning( void );
 	void	_error( void );
 
-	const char*		_complainLevels[4];
 	typedef void	(Harl::*_complainFun)(void);
 	_complainFun	_complainFunctions[4];
 };
