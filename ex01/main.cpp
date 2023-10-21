@@ -6,28 +6,25 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:22:19 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/11 23:36:50 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/21 12:32:30 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
+Zombie*	zombieHorde( int N, std::string name);
+
 int	main(void)
 {
-	Zombie* zombieHorde1;
-	Zombie* zombieHorde2;
-	Zombie* zombieHorde3;
+	Zombie* zombieHorde1 = NULL;
 
-	std::cout << "\nALLOCATE HORDES" << std::endl;
-	zombieHorde1 = Zombie::zombieHorde(-1, "horde -1");
-	zombieHorde1 = Zombie::zombieHorde(0, "horde 0");
-	zombieHorde2 = Zombie::zombieHorde(5, "horde 5");
-	zombieHorde3 = Zombie::zombieHorde(900000000, "horde 900000000");
+	std::cout << "ALLOCATE HORDE" << std::endl;
+	zombieHorde1 = zombieHorde(-1, "horde -1");
+	zombieHorde1 = zombieHorde(0, "horde 0");
+	zombieHorde1 = zombieHorde(5, "horde 5");
 
-	std::cout << "\nDELETING HORDES" << std::endl;
+	std::cout << "\nDELETING HORDE" << std::endl;
 	delete[] zombieHorde1;
-	delete[] zombieHorde2;
-	delete[] zombieHorde3;
 
 	return (0);
 }

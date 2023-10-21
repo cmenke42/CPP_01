@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:22:19 by cmenke            #+#    #+#             */
-/*   Updated: 2023/10/21 12:18:01 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/21 12:31:02 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Zombie*	newZombie( std::string name);
 
 int	main(void)
 {
-	Zombie* heapZombie;
+	Zombie* heapZombie = NULL;
 
 	std::cout << "RANDOM" << std::endl;
 	randomChump("stackRandom");
