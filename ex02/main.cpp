@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 23:17:02 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/16 15:27:33 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/21 12:37:57 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 int	main(void)
 {
-	std::string		stringVar;
+	std::string		stringVAR;
 	std::string*	stringPTR;
-	std::string&	stringREF = stringVar;
+	std::string&	stringREF = stringVAR;
 
-	stringVar = "HI THIS IS BRAIN";
-	stringPTR = &stringVar;
+	stringVAR = "HI THIS IS BRAIN";
+	stringPTR = &stringVAR;
 
-	std::cout << "PRINTING ADDRESSES" << std::endl;
-	std::cout << "stringVar:" << &stringVar << std::endl;
-	std::cout << "stringPTR:" << stringPTR << std::endl;
-	std::cout << "stringREF:" << &stringREF << std::endl;
+	std::cout << "PRINTING ADDRESSES HELD BY\n";
+	std::cout << "stringVAR:" << &stringVAR;
+	std::cout << "\nstringPTR:" << stringPTR;
+	std::cout << "\nstringREF:" << &stringREF;
 
-	std::cout << "\nPRINTING VALUES" << std::endl;
-	std::cout << "stringVar:" << stringVar << std::endl;
-	std::cout << "stringPTR:" << *stringPTR << std::endl;
-	std::cout << "stringREF:" << stringREF << std::endl;
+	std::cout << "\n\nPRINTING VALUES POINTED TO BY";
+	std::cout << "\nstringVAR:" << stringVAR;
+	std::cout << "\nstringPTR:" << *stringPTR;
+	std::cout << "\nstringREF:" << stringREF << std::endl;
 	return (0);
 }

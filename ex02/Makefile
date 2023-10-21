@@ -6,11 +6,11 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/11 23:29:45 by cmenke           ###   ########.fr        #
+#    Updated: 2023/10/21 12:35:29 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := hi_this_is_brain
+NAME := a.out
 
 OBJDIR := objects
 
