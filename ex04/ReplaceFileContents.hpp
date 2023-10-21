@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 21:01:16 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/18 01:05:27 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/21 17:00:03 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <string>
 #include <fstream>
 #include <cstring>
+#include <sys/stat.h>
 
 #define ERR_WRONG_ARG_NUM "Error: Wrong number of arguments."
 #define ERR_EXPECTED_ARG "Expected arguments: filename, string \
@@ -29,19 +30,18 @@ class ReplaceFileContents
 		ReplaceFileContents(void);
 		~ReplaceFileContents(void);
 
-		void	setInputFilename(const char* inputFilename);
-		bool	replace(const char* needle, const char* replacement);
+		void	setInputFilename(const std::string inputFilename);
+		bool	replace(const std::string needle, const std::string replacement);
 
-		
 	private:
-		const char*		_inputFilename;
+		std::string		_inputFilename;
 		std::ifstream	_inputFile;
 		std::ofstream	_outputFile;
 
 		bool			_openFiles(void);
 		void			_closeFiles(void);
-		void			_replaceNeedleInHaystack(std::string& haystack, const char* needle,
-							const char* replacement);
+		void			_replaceNeedleInHaystack(std::string& haystack, const std::string& needle,
+							const std::string& replacement);
 };
 
 #endif /* REPLACE_FILE_CONTENTS_HPP */
