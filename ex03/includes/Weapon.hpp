@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 00:08:33 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/16 18:02:39 by cmenke           ###   ########.fr       */
+/*   Created: 2023/09/12 00:08:48 by cmenke            #+#    #+#             */
+/*   Updated: 2023/10/21 12:48:40 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_B_HPP
-# define HUMAN_B_HPP
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-#include "Weapon.hpp"
+#include <iostream>
+#include <string>
 
-class HumanB
+class Weapon
 {
 	public:
-		HumanB(std::string name);
-		~HumanB(void);
-		void	attack(void) const;
-		void	setWeapon(Weapon& weaponName);
-		void	setWeapon(Weapon* weaponName);
+		Weapon(const std::string& weaponType);
+		~Weapon(void);
 
+		const std::string&	getType(void) const;
+		void				setType(const std::string& weaponType);
+	
 	private:
-		std::string	_name;
-		Weapon*		_weapon;
+		std::string	_type;
 };
 
-
-#endif /* HUMAN_B_HPP */
+#endif /* WEAPON_HPP */

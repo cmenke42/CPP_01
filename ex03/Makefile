@@ -6,11 +6,11 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/16 18:05:08 by cmenke           ###   ########.fr        #
+#    Updated: 2023/10/21 13:09:37 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := unnecessary_violence
+NAME := a.out
 
 OBJDIR := objects
 
@@ -21,12 +21,10 @@ SRCS := main.cpp \
 
 OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 
-HEADER := Weapon.hpp \
-		HumanA.hpp \
-		HumanB.hpp
+HEADER := $(addprefix includes/, HumanA.hpp HumanB.hpp Weapon.hpp)
 
 #Production flags
-CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic -I includes
 
 #Development flags
 # CPPFLAGS += -g -O0

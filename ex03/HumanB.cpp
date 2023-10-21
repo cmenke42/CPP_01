@@ -6,7 +6,7 @@
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 00:08:15 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/16 18:02:42 by cmenke           ###   ########.fr       */
+/*   Updated: 2023/10/21 12:57:38 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 
 HumanB::HumanB(std::string name)
-		: _name(name), _weapon(NULL)
+		: _name(name), _weaponType(NULL)
 {
 
 }
@@ -25,18 +25,21 @@ HumanB::~HumanB()
 
 void	HumanB::attack(void) const
 {
-	std::cout << this->_name << " attacks with their ";
-	if (this->_weapon)
-		std::cout << this->_weapon->getType();
-	std::cout << std::endl;
+	if (!this->_weaponType)
+		std::cout << this->_name << " has no weapon" << std::endl;
+	else
+	{
+		std::cout << this->_name << " attacks with: ";
+		std::cout << this->_weaponType->getType() << std::endl;
+	}
 }
 
-void	HumanB::setWeapon(Weapon& weaponName)
+void	HumanB::setWeapon(Weapon& weaponType)
 {
-	this->_weapon = &weaponName;
+	this->_weaponType = &weaponType;
 }
 
-void	HumanB::setWeapon(Weapon* weaponName)
+void	HumanB::setWeapon(Weapon* weaponType)
 {
-	this->_weapon = weaponName;
+	this->_weaponType = weaponType;
 }

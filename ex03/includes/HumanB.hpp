@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 23:39:36 by cmenke            #+#    #+#             */
-/*   Updated: 2023/09/16 18:05:41 by cmenke           ###   ########.fr       */
+/*   Created: 2023/09/12 00:08:33 by cmenke            #+#    #+#             */
+/*   Updated: 2023/10/21 12:55:01 by cmenke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_A_HPP
-# define HUMAN_A_HPP
+#ifndef HUMAN_B_HPP
+# define HUMAN_B_HPP
 
 #include "Weapon.hpp"
 
-class HumanA
+class HumanB
 {
 	public:
-		HumanA(std::string name, Weapon& weaponName);
-		~HumanA(void);
+		HumanB(std::string name);
+		~HumanB(void);
 		void	attack(void) const;
+		void	setWeapon(Weapon& weaponType);
+		void	setWeapon(Weapon* weaponType);
 
 	private:
 		std::string	_name;
-		Weapon&		_weapon;
+		Weapon*		_weaponType;
 };
 
-#endif /* HUMAN_A_HPP */
+
+#endif /* HUMAN_B_HPP */
