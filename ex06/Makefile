@@ -6,11 +6,11 @@
 #    By: cmenke <cmenke@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 18:54:58 by cmenke            #+#    #+#              #
-#    Updated: 2023/09/19 15:47:56 by cmenke           ###   ########.fr        #
+#    Updated: 2023/10/21 17:42:48 by cmenke           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := harlFilter
+NAME := a.out
 
 OBJDIR := objects
 
@@ -22,10 +22,10 @@ OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 HEADER := Harl.hpp
 
 #Production flags
-# CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic
 
 #Development flags
-CPPFLAGS := -Wall -Wextra -std=c++98 -pedantic
+# CPPFLAGS := -Wall -Wextra -std=c++98 -pedantic
 # CPPFLAGS += -g -O0
 # CPPFLAGS += -fsanitize=thread
 # CPPFLAGS += -fsanitize=address
